@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36" fill="none">
+<path   fill="rgba(143, 145, 172, 1)"  d="M6 3L25.5 3C27.1569 3 28.5 4.34315 28.5 6L28.5 25.5C28.5 27.1569 27.1569 28.5 25.5 28.5L6 28.5C4.34315 28.5 3 27.1569 3 25.5L3 6C3 4.34315 4.34315 3 6 3ZM6 6C6 6 6 6 6 6L6 25.5C6 25.5 6 25.5 6 25.5L25.5 25.5C25.5 25.5 25.5 25.5 25.5 25.5L25.5 6C25.5 6 25.5 6 25.5 6L6 6Z">
+</path>
+<path    stroke="rgba(143, 145, 172, 1)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"  d="M31.5 9L31.5 29.25C31.5 30.4927 30.4927 31.5 29.25 31.5L9 31.5">
+</path>
+<path    stroke="rgba(143, 145, 172, 1)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"  d="M4.5 18.75L10.2421 13.6458C10.8153 13.1364 11.6803 13.1412 12.2477 13.6571L19.5 20.25">
+</path>
+<path    stroke="rgba(143, 145, 172, 1)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"  d="M16.4999 17.25L20.0886 14.2594C20.6228 13.8143 21.3927 13.7946 21.9489 14.2117L26.9999 18">
+</path>
+<path    stroke="rgba(143, 145, 172, 1)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"  d="M4.5 14.2499L4.5 20.4348">
+</path>
+<path    stroke="rgba(143, 145, 172, 1)" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"  d="M27 14.2499L27 20.4348">
+</path>
+</svg>

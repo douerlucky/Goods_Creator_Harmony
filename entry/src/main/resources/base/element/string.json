@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "read_media_reason",
+      "value": "需要访问相册以选择上传图片"
+    },
+    {
+      "name": "write_media_reason",
+      "value": "应用需要写入媒体文件以将选择的图片复制到缓存目录"
+    }
+  ]
+}
