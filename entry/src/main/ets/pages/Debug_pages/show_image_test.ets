@@ -36,7 +36,7 @@ struct Index {
       // 创建 HTTP 请求对象
       const httpRequest = http.createHttp();
       httpRequest.request(
-        'http://120.27.132.232:3200/api/show_images',
+        'http://120.55.76.15:3200/api/show_images',
         {
           method: http.RequestMethod.GET,
           header: {

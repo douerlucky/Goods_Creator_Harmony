@@ -53,7 +53,7 @@ async function FileUpload(imgSrc: string) {
   ];
   let data: Array<request.RequestData> = [{ name: 'name', value: 'value' }];
   let uploadConfig: request.UploadConfig = {
-    url: 'http://120.27.132.232:3100/api/upload-image',
+    url: 'http://120.55.76.15:3100/api/upload-image',
     header: header,
     method: 'POST',
     files: files,

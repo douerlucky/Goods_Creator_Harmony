@@ -36,7 +36,7 @@ struct sql_login_test {
   }
 
   async verify() {
-    const getURL = "http://120.27.132.232:3400/test-db";
+    const getURL = "http://120.55.76.15:3400/test-db";
     // 定义要发送的数据
     const data:Data = {
       username: this.user_name,

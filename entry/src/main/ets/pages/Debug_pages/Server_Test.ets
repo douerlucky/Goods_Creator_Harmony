@@ -25,7 +25,7 @@ struct Index {
   }
   private async  sendTextToServer(text: string) {
   // 阿里云 ECS 的公网 IP 或域名（替换为你的服务器地址）
-  let url = 'http://120.27.132.232:3000/api/receive-text';
+  let url = 'http://120.55.76.15:3000/api/receive-text';
 
   // 3. 构造请求选项
   let options: http.HttpRequestOptions = {

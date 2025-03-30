@@ -48,11 +48,6 @@ struct big_button {
     .padding(30)
     .borderRadius(32)
     .shadow(ShadowStyle.OUTER_DEFAULT_LG)
-    .onClick(()=>{
-      router.pushUrl({
-        url:this.push_router_url
-      })
-    })
   }
 }
 
@@ -76,7 +71,6 @@ struct confirm_button{
 
 @Component
 struct next_step_button{
-  push_router_url: string = ''
   build() {
     Button()
     {
@@ -88,11 +82,6 @@ struct next_step_button{
       }
     }.width(130)
     .height(50)
-    .onClick(()=>{
-      router.pushUrl({
-        url:this.push_router_url
-      })
-    })
   }
 }
 

@@ -1,20 +1,15 @@
 import * as buttons from "../../page_compolents/buttons"
 import { router } from '@kit.ArkUI'
+import Badge from '../../class/Badge'
 
-interface  ParamsObj{
-  budget_specification: number
-}
 
 @Entry
 @Component
 struct Choose_Flash_Bottom {
+  @StorageLink('badge_create') badge_create:Badge = { } as Badge
   @State now_flash_bottom: ResourceStr = $r("app.media.original")
   @State isShow: boolean = false
-  @State budget_specification: number = 58
-  aboutToAppear(): void {
-    const params = router.getParams() as ParamsObj
-    this.budget_specification = params.budget_specification
-  }
+  @State budget_specification: number = this.badge_create.specification
 
 
   @Builder select_sheet() {
@@ -37,7 +32,7 @@ struct Choose_Flash_Bottom {
             .fontSize(36)
             .fontWeight(FontWeight.Bold)
             .alignSelf(ItemAlign.Start)
-          Text(`当前制作的是${this.budget_specification}mm的吧唧`).alignSelf(ItemAlign.Start)
+          Text(`当前制作的是${this.badge_create.specification}mm的吧唧`).alignSelf(ItemAlign.Start)
         }.width('100%')
 
         Column()
@@ -58,7 +53,14 @@ struct Choose_Flash_Bottom {
         .height(300)
 
         Blank().height(150)
-        buttons.next_step_button({ push_router_url: 'pages/Budget_Create_pages/upload_picture' })
+        buttons.next_step_button()
+          .onClick(()=>{
+
+            this.badge_create.flash_bottom = this.now_flash_bottom
+            router.pushUrl({ url: 'pages/Badge_Create_pages/upload_picture' })
+
+          })
+
 
       }.width('100%')
       .height('100%')

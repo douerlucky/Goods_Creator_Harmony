@@ -2,9 +2,13 @@ import creator_page from "../page_compolents/creator_page"
 import home_page from "../page_compolents/home_page"
 import image from '@ohos.multimedia.image'
 
+PersistentStorage.persistProp('uid','')
+
 @Entry()
 @Component
 struct Index {
+  @StorageLink('uid') uid:string = ''
+
   @State page_index: number = 0 // 页面的下标
 
   @Builder
@@ -60,7 +64,7 @@ struct Index {
 
           TabContent() {
             Text("4")
-          }.tabBar(this.tab_style(3, $r("app.media.user_icon_unhighlight"), $r("app.media.user_icon_highlight"), "个人"))
+          }.tabBar(this.tab_style(3, $r("app.media.realizasion_unhighlight"), $r("app.media.realization_highlight"), "实物化"))
         }
         .onChange((index: number) => {
           this.page_index = index

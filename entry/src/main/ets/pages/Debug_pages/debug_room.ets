@@ -37,6 +37,11 @@ struct Debug_room {
           url:"pages/Debug_pages/search_badge_test"
         })
       })
+      Button("海螺AI测试").onClick(()=>{
+        router.pushUrl({
+          url:"pages/Debug_pages/AI_image_paintting_test"
+        })
+      })
     }
   }
 }

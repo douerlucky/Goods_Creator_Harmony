@@ -74,7 +74,7 @@ struct Search_badge_test {
   }
   async search_badge(query_name:string)
   {
-    const getURL = "http://120.27.132.232:3400/test-db/query_badge";
+    const getURL = "http://120.55.76.15:3400/api/db/query_badge";
     // 定义要发送的数据
     const data:Data = {
       query_name:query_name

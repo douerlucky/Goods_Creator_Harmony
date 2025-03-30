@@ -20,7 +20,10 @@ struct Select_Creat {
         buttons.big_button({title:"创作吧唧",
           desc:"上传图片\n选择柄底\n体验制作一颗徽章的乐趣" ,
         image_source:$r("app.media.create_budge_icon"),
-          push_router_url:"pages/Budget_Create_pages/choose_a_budget_specification"
+        }).onClick(()=>{
+          router.pushUrl( {
+            url:"pages/Badge_Create_pages/choose_a_badge_specification"
+          })
         })
       }
       .padding({left:20,right:20})

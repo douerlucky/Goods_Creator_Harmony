@@ -22,8 +22,17 @@ struct home_page {
             .fontWeight(FontWeight.Bold)
           Image($r('app.media.more'))
             .width(10)
-          Blank().width(60)
-          Button("添加")
+          Blank().width(10)
+          Image($r('app.media.add_folder'))
+            .width(36)
+          Image($r('app.media.user_info'))
+            .width(36)
+            .onClick(()=>{
+              router.pushUrl({
+                url: "pages/user_info",
+              })
+            })
+
         }.width('100%')
 
       }.padding({left:20,right:20})
