@@ -39,9 +39,39 @@ struct Debug_room {
       })
       Button("海螺AI测试").onClick(()=>{
         router.pushUrl({
-          url:"pages/Debug_pages/AI_image_paintting_test"
+          url:"pages/Debug_pages/AI_image_painting_test"
         })
       })
+      Button("图片编辑测试").onClick(()=> {
+        router.pushUrl({
+          url: "pages/Debug_pages/edit_page"
+        })
+      })
+        Button("图片下载测试").onClick(()=> {
+          router.pushUrl({
+            url: "pages/Debug_pages/download_img_test"
+          })
+        })
+      Button("图片裁剪测试").onClick(()=> {
+        router.pushUrl({
+          url: "pages/Debug_pages/croppage_test"
+        })
+      })
+      Button("视频播放测试").onClick(()=> {
+        router.pushUrl({
+          url: "pages/Debug_pages/video_test"
+        })
+      })
+      Button("吧唧互动化测试").onClick(()=> {
+        router.pushUrl({
+          url: "pages/Badge_Create_pages/choose_interaction"
+        })
+      })
+      Button("shangchuan").onClick(()=> {
+        router.pushUrl({
+          url: "pages/Debug_pages/new_upload_test"
+        })
+      })
+      }
     }
   }
-}

@@ -2,7 +2,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 import { BusinessError, request } from '@kit.BasicServicesKit';
 import fs from '@ohos.file.fs';
 import common from '@ohos.app.ability.common';
-import { confirm_button } from './buttons';
+import * as server from '../class/ServerKits';
 
 let context = getContext(this) as common.UIAbilityContext
 let cacheDir = context.cacheDir
@@ -59,7 +59,7 @@ async function FileUpload(imgSrc: string,uid: string,user_file_name: string) {
     { name: 'name', value: 'value' }
   ];
   let uploadConfig: request.UploadConfig = {
-    url: 'http://120.55.76.15:3100/api/upload-image/to_oss',
+    url: `${server.postBaseUrl}${server.fileuploadPort}/api/upload-image/to_oss`,
     header: header,
     method: 'POST',
     files: files,

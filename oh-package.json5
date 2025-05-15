@@ -5,7 +5,11 @@
     "@ohos/axios": "^2.2.4",
     "@ohos/base64": "^2.0.1",
     "@kingtous/uuid": "^1.0.0",
-    "@ohos/crypto-js": "^2.0.4"
+    "@ohos/crypto-js": "^2.0.4",
+    "@candies/image_cropper": "^1.1.0",
+    "image-crop": "^1.0.1",
+    "@xinyansoft/oh-crop": "^1.0.3",
+    "@peakmain/library": "^2.1.0"
   },
   "devDependencies": {
     "@ohos/hypium": "1.0.19",

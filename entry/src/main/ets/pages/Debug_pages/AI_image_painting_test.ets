@@ -38,7 +38,7 @@ interface CheckStatusResponse {
 
 // 配置服务实例
 const instance = axios.create({
-  baseURL: 'http://120.55.76.15:3500',
+  baseURL: 'http://120.55.76.15:3002/api/ai/text2img/generate',
   timeout: 60000,
   headers: {
     'content-type': 'application/json'

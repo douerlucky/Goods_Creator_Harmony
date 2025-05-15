@@ -4,6 +4,7 @@ import { router } from '@kit.ArkUI'
 @Component
 struct back_button {
   content:string = "返回"
+  isdouble:boolean = false
   build() {
     Button()
     {
@@ -16,9 +17,13 @@ struct back_button {
     }
       .onClick(()=>{
       router.back()
+        if(this.isdouble)
+          router.back()
     }).buttonStyle(ButtonStyleMode.TEXTUAL)
   }
 }
+
+
 
 @Preview
 @Component
@@ -51,6 +56,7 @@ struct big_button {
   }
 }
 
+@Preview
 @Component
 struct confirm_button{
   build() {
@@ -66,11 +72,14 @@ struct confirm_button{
       }
     }.width(130)
     .height(50)
+
   }
 }
 
+@Preview
 @Component
 struct next_step_button{
+  public state:boolean = true
   build() {
     Button()
     {
@@ -80,10 +89,88 @@ struct next_step_button{
           .fontColor(Color.White)
           .fontSize(20)
       }
-    }.width(130)
+    }
+    .width(130)
     .height(50)
+    .backgroundColor(this.state ? '' : Color.Gray)
   }
 }
 
-export { back_button,big_button,confirm_button,next_step_button}
+@Preview
+@Component
+struct short_function_button{
+  text:string = '默认操作'
+  icon: ResourceStr = ''
+  build()
+  {
+    Button()
+    {
+      Row({space:5})
+      {
+        Image(this.icon)
+          .width(16)
+        Text(this.text)
+          .fontSize(16)
+      }
+    }
+      .width(130)
+      .height(50)
+      .backgroundColor('#f5f5f5')
+      .opacity(0.75)
+  }
+}
+
+@Preview
+@Component
+struct long_function_button{
+  text:string = '默认操作'
+  icon: ResourceStr = ''
+  build()
+  {
+    Button()
+    {
+      Row({space:10})
+      {
+        Image(this.icon)
+          .width(24)
+        Text(this.text)
+          .width('70%')
+          .fontSize(16)
+          .textAlign(TextAlign.Center)
+      }
+    }
+    .width(260)
+    .height(50)
+    .backgroundColor('#f5f5f5')
+    .opacity(0.75)
+  }
+}
+
+@Preview
+@Component
+struct mini_button{
+  text:string = '默认操作'
+  icon: ResourceStr = ''
+  build()
+  {
+    Button()
+    {
+      Column({space:5})
+      {
+        Image(this.icon)
+          .width(24)
+        Text(this.text)
+          .width('70%')
+          .fontSize(12)
+          .textAlign(TextAlign.Center)
+      }
+    }
+    .buttonStyle(ButtonStyleMode.TEXTUAL)
+    .width(60)
+    .height(60)
+  }
+}
+
+
+export { back_button,big_button,confirm_button,next_step_button,short_function_button,long_function_button,mini_button}
 

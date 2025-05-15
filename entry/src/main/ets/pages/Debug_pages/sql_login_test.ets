@@ -5,8 +5,9 @@ const headers = new AxiosHeaders({
 });
 
 interface  Data  {
-  username: string,
-  pwd: string
+  user_name: string,
+  pwd: string,
+  loginType: number,
 };
 
 @Entry
@@ -36,11 +37,12 @@ struct sql_login_test {
   }
 
   async verify() {
-    const getURL = "http://120.55.76.15:3400/test-db";
+    const getURL = "http://120.55.76.15:3000/api/db/user/login";
     // 定义要发送的数据
     const data:Data = {
-      username: this.user_name,
-      pwd: this.pwd
+      user_name: this.user_name,
+      pwd: this.pwd,
+      loginType: 0
     };
     // 定义请求头
 
